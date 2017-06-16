@@ -12,5 +12,10 @@ class UserStory {
   Date lastUpdated
 
   static constraints = {
+    title blank:false, size:1..100
+    description blank:false, size:1..1000
+    prioridad min:1, max:10
+    esfuerzoEnPuntos blank:false, range:1..5
+    criteriosDeAceptacion blank:true, size:1..1000
   }
 }

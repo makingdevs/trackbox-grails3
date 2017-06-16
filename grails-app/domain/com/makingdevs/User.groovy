@@ -9,5 +9,11 @@ class User {
   Date lastUpdated
 
   static constraints = {
+    username blank:false, size:1..50, unique:true
+    password blank:false, size:1..50, validator: { val, obj ->
+      if(val == obj.username) {
+        return false
+      }
+    }
   }
 }
