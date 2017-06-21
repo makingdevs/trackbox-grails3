@@ -16,4 +16,9 @@ class User {
       }
     }
   }
+
+  static hasMany = [
+    projects : Project
+  ]
+  static belongsTo = [ Task ]
 }

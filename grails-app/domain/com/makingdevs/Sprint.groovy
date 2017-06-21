@@ -19,4 +19,9 @@ class Sprint {
     title blank:false, size:1..50
     description blank:true,size:1..1000
   }
+
+  static hasMany = [
+    sprintBacklog : UserStory
+  ]
+
 }

@@ -16,4 +16,9 @@ class Project {
     description nullable:true, blank:true, size: 1..5000
     publicVisible()
   }
+
+  static hasMany = [
+    sprints : Sprint,
+    userStories : UserStory
+  ]
 }

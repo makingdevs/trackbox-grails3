@@ -18,4 +18,12 @@ class UserStory {
     esfuerzoEnPuntos blank:false, range:1..5
     criteriosDeAceptacion blank:true, size:1..1000
   }
+
+  static belongsTo = [
+    project : Project
+  ]
+
+  static hasMany = [
+    tasks : Task
+  ]
 }
