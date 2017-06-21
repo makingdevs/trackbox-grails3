@@ -5,7 +5,16 @@ import grails.transaction.Transactional
 class HomeController {
 
   def index() {
-    [ projects : Project.list() ]
+    [ projects : Project.list(), project: new ProjectCommand() ]
+  }
+
+  def createProject(ProjectCommand projectCommand){
+    log.debug "${projectCommand.validate()}"
+    if(projectCommand.validate()){
+      redirect action:'index'
+    }else{
+      render view:'index', model:[projects : Project.list(), project: projectCommand]
+    }
   }
 
   def create(Project project){
