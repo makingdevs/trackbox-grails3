@@ -1,26 +1,19 @@
 package com.makingdevs
 
+import grails.transaction.Transactional
+
 class HomeController {
 
   def index() {
-    log.debug "Hola mundo ${new Date()}"
-    log.debug "${params}"
-    params.each { k,v ->
-      log.debug "${v?.class}"
-    }
-    log.debug "${request}"
-    log.debug "${session.properties}"
-    render "Hola mundo"
+    [ projects : Project.list() ]
   }
 
-  def accion1(){
-    flash.variable = "Estaré disponible en el siguiente request"
-    //redirect action:"accion2" // Generando un nuevo request
-    redirect controller: 'project', action: 'create'
+  def create(){
+    def project = new Project(params)
+    log.debug "${project.validate()}"
+    log.debug "${project.errors}"
+    project.save(flush: true)
+    render project
   }
 
-  def accion2(){
-    log.debug flash.variable // "Estaré disponible en el siguiente request"
-    render "Terminado"
-  }
 }
