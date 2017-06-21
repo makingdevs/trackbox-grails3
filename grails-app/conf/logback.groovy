@@ -34,5 +34,5 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
 }
 
-logger 'grails.artefact.controllers', DEBUG, ['STDOUT'], false
+logger 'grails.app.controllers', DEBUG, ['STDOUT'], false
 root(ERROR, ['STDOUT'])
