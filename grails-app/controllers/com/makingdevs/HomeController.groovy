@@ -30,19 +30,24 @@ class ProjectCommand {
   String codeName
   String description
   Boolean publicVisible
-  List sprints = []
-  List backlog = []
+  //List sprints = []
+  //List backlog = []
 
   static constraints = {
-    owner blank:false,size:1..100
-    codeName blank:false,size:1..50,unique:true
-    description blank:true, size:0..1000
+    owner blank:false,size:5..100
+    codeName blank:false,size:5..50,unique:true
+    description blank:false, size:1..1000
     publicVisible()
-    sprints minSize:1
-    backlog minSize:1
+    //sprints minSize:1
+    //backlog minSize:1
   }
 
   Project createProject(){
-    // ...
+    new Project(
+      owner:owner,
+      codeName:codeName,
+      description:description,
+      publicVisible:publicVisible
+    )
   }
 }
