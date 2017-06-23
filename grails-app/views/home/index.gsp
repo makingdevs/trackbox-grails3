@@ -6,7 +6,7 @@
   <meta name="layout" content="materialize"/>
 </head>
 <body>
-  <h1>Mostrando ${projects?.size() ?: 0} proyectos</h1>
+  <h1>Nuevo proyecto</h1>
 
   <% now = new Date() %>
   <g:set var="tomorrow" value="${new Date() +  1}"/>
@@ -51,19 +51,19 @@
     </g:each>
   </table>
 
-  <hr>
-
   <div>
     <g:hasErrors bean="${project}">
     <g:eachError><p><g:message error="${it}"/></p></g:eachError>
     </g:hasErrors>
   </div>
 
-  <g:form url="[action: 'createProject']">
-    <g:render template="projectForm"/>
-    <input type="submit" value="Enviar"/>
-    <button type="submit">Botón con icono</button>
-  </g:form>
+  <div class="row">
+    <g:form url="[action: 'createProject']" class="col s12">
+      <g:render template="projectForm"/>
+      <input type="submit" value="Enviar" class="waves-effect waves-light btn"/>
+      <button type="submit" class="waves-effect waves-light btn">Botón con icono</button>
+    </g:form>
+  </div>
 
   <trk:repeat times="7">
     Hola ${it}
