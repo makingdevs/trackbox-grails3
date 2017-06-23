@@ -8,6 +8,7 @@
     <title>
       <g:layoutTitle default="Materialize"/>
     </title>
+    <asset:stylesheet src="materialize.css"/>
     <g:layoutHead/>
   </head>
   <body>
