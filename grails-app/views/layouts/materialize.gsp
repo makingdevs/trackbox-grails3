@@ -64,5 +64,6 @@
         </div>
       </div>
     </footer>
+    <asset:javascript src="theme.js"/>
   </body>
 </html>
