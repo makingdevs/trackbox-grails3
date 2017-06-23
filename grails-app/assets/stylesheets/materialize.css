@@ -1,6 +1,13 @@
 /*
-*
-*= require third-party/node_modules/materialize-css/dist/css/materialize
-*= require_self
-*/
+ *
+ *= require third-party/node_modules/materialize-css/dist/css/materialize
+ *= require_self
+ */
 
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
