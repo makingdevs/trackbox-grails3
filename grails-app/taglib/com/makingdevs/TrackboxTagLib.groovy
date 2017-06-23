@@ -19,7 +19,10 @@ class TrackboxTagLib {
 
   def appStatus = { attrs, body ->
     out << "<ul>"
-    out << "<li> Exists ${Project.count()} projects </li>"
+
+    out << g.link(controller:'project') {
+      "<li> Exists ${Project.count()} projects </li>"
+    }
     out << "<li> Exists ${UserStory.count()} user stories </li>"
     out << "<li> Exists ${Task.count()} tasks </li>"
     out << "<li> Exists ${User.count()} users </li>"
