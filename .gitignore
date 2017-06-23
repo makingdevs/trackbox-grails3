@@ -49,3 +49,5 @@ build/
 /target
 
 # End of https://www.gitignore.io/api/grails
+node_modules/
+grails-app/assets/javascripts/third-party/
