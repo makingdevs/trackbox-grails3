@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <meta name="layout" content="materialize"/>
 </head>
 <body>
   <h1>Mostrando ${projects?.size() ?: 0} proyectos</h1>
