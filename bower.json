@@ -1,0 +1,20 @@
+{
+  "name": "trackbox",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "neodevelop <juan@makingdevs.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/makingdevs/trackbox-grails3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.99.0"
+  }
+}
