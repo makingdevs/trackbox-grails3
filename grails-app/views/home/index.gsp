@@ -50,6 +50,12 @@
 
   <hr>
 
+  <div>
+    <g:hasErrors bean="${project}">
+    <g:eachError><p><g:message error="${it}"/></p></g:eachError>
+    </g:hasErrors>
+  </div>
+
   <g:form url="[action: 'createProject']">
     <div>
       <label for="owner">Owner:</label>
