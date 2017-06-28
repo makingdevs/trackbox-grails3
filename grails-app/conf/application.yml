@@ -25,10 +25,17 @@ spring:
     groovy:
         template:
             check-template-location: false
+    management:
+      shell:
+        auth:
+          simple:
+            user:
+              name: test
+              password: test
 
 # Spring Actuator Endpoints are Disabled by Default
 endpoints:
-    enabled: false
+    enabled: true
     jmx:
         enabled: true
 
