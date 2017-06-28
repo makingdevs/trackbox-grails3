@@ -28,6 +28,9 @@
     ${request}
   </div>
   -->
+  <g:if test="${flash.message}">
+    <h4>${flash.message}</h4>
+  </g:if>
 
   <table border="1px">
     <g:each var="p" in="${projects}">
