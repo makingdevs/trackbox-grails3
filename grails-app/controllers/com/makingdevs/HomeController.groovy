@@ -7,7 +7,8 @@ class HomeController {
   ProjectService projectService
 
   def index() {
-    [ projects : Project.list(), project: new ProjectCommand() ]
+    def projectsFromGithub = projectService.projectsFromGithub()
+    [ projects : Project.list(), project: new ProjectCommand(), projectsFromGithub: projectsFromGithub ]
   }
 
   def createProject(ProjectCommand projectCommand){

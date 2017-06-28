@@ -35,7 +35,7 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
 }
 
 //logger 'grails.app.controllers', DEBUG, ['STDOUT'], false
-//logger 'grails.app.services', DEBUG, ['STDOUT'], false
+logger 'grails.app.services', DEBUG, ['STDOUT'], false
 //logger 'org.springframework.transaction', TRACE, ['STDOUT'], false
-logger 'org.grails.orm.hibernate.GrailsHibernateTransactionManager', DEBUG, ['STDOUT'], false
+//logger 'org.grails.orm.hibernate.GrailsHibernateTransactionManager', DEBUG, ['STDOUT'], false
 root(ERROR, ['STDOUT'])

@@ -68,6 +68,14 @@
     </g:form>
   </div>
 
+  <div class="row">
+    <ul>
+    <g:each in="${projectsFromGithub}" var="p">
+      <li>${p.name}</li>
+    </g:each>
+    </ul>
+  </div>
+
   <trk:repeat times="7">
     Hola ${it}
   </trk:repeat>
