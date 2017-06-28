@@ -5,7 +5,9 @@ import grails.transaction.Transactional
 @Transactional
 class ProjectService {
 
-    def serviceMethod() {
-
-    }
+  def startNewProject(Project project) {
+    log.debug "Guardando el project"
+    project.save()
+    project
+  }
 }

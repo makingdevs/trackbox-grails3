@@ -4,6 +4,8 @@ import grails.transaction.Transactional
 
 class HomeController {
 
+  ProjectService projectService
+
   def index() {
     [ projects : Project.list(), project: new ProjectCommand() ]
   }
@@ -11,6 +13,9 @@ class HomeController {
   def createProject(ProjectCommand projectCommand){
     log.debug "${projectCommand.validate()}"
     if(projectCommand.validate()){
+      Project p = projectCommand.createProject()
+      projectService.startNewProject(p)
+      flash.message = "El proyecto ${p.codeName} se ha creado!"
       redirect action:'index'
     }else{
       render view:'index', model:[projects : Project.list(), project: projectCommand]
