@@ -5,7 +5,7 @@ import grails.transaction.Transactional
 @Transactional
 class UserStoryService {
 
-    def serviceMethod() {
-
-    }
+  def serviceMethod() {
+    log.debug "Tocando User Story Service"
+  }
 }
