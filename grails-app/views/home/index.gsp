@@ -37,9 +37,9 @@
       <tr>
         <td>${p.owner}</td>
         <td>
-          <g:link controller="project" action="show" id="${p.id}">
+          <a href="/projects/${p.codeName}">
             ${p.codeName}
-          </g:link>
+          </a>
         </td>
         <td>${p.description}</td>
         <td>
