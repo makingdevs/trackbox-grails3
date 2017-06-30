@@ -18,23 +18,17 @@
 	<hr>
 
 
+	<g:each in="${backlog}" var="userStory">
 	<div class="row">
 		<div class="col s4">
 			<div class="card small blue-grey darken-1">
 				<div class="card-content white-text">
-					<b>Hola mundo</b>
-					<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-				</div>
-				<div class="card-action">
-					<a href="#">Add task</a>
-				</div>
-			</div>
-		</div>
-		<div class="col s4">
-			<div class="card small blue-grey darken-1">
-				<div class="card-content white-text">
-					<b>Hola mundo</b>
-					<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+					<b>${userStory.title}</b>
+					<p>${userStory.description}</p>
+					<ul>
+						<li>Priority: ${userStory.prioridad}</li>
+						<li>Effort: ${userStory.esfuerzoEnPuntos}</li>
+					</ul>
 				</div>
 				<div class="card-action">
 					<a href="#">Add task</a>
@@ -42,27 +36,7 @@
 			</div>
 		</div>
 	</div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Priority</th>
-        <th>Effort</th>
-      </tr>
-    </thead>
-    <tbody>
-      <g:each in="${backlog}" var="userStory">
-      <tr>
-        <td>${userStory.title}</td>
-        <td>${userStory.description}</td>
-        <td>${userStory.prioridad}</td>
-        <td>${userStory.esfuerzoEnPuntos}</td>
-      </tr>
-      </g:each>
-    </tbody>
-  </table>
+	</g:each>
 
 </body>
 </html>
