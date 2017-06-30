@@ -18,8 +18,8 @@
 	<hr>
 
 
-	<g:each in="${backlog}" var="userStory">
 	<div class="row">
+	<g:each in="${backlog}" var="userStory">
 		<div class="col s4">
 			<div class="card small blue-grey darken-1">
 				<div class="card-content white-text">
@@ -35,8 +35,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	</g:each>
+	</div>
 
 </body>
 </html>
