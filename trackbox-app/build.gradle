@@ -26,6 +26,12 @@ repositories {
     maven { url  "http://dl.bintray.com/dmahapatro/plugins" }
 }
 
+grails {
+  plugins {
+    compile project(":commentable")
+  }
+}
+
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
