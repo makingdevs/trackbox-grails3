@@ -17,7 +17,7 @@ class HomeController {
       Project p = projectCommand.createProject()
       projectService.startNewProject(p)
       flash.message = "El proyecto ${p.codeName} se ha creado!"
-      redirect action:'index'
+      redirect controller:"backlog", params:[codeName: p.codeName]
     }else{
       render view:'index', model:[projects : Project.list(), project: projectCommand]
     }

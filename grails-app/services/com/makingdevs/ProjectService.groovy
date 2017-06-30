@@ -20,6 +20,7 @@ class ProjectService {
 
   def startNewProject(Project project) {
     log.debug "Guardando el project"
+    project.codeName = project.codeName.toUpperCase()
     project.save()
     userStoryService.serviceMethod()
     project

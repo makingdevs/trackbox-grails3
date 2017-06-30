@@ -10,6 +10,7 @@ class UrlMappings {
     }
   "/projects"(controller:'project')
   "/projects/$codeName"(controller:'project', action:"byCodeName")
+  "/projects/$codeName/backlog"(controller:'backlog')
 
   "/"(view:"/index")
   "500"(view:'/error')

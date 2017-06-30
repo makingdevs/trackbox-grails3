@@ -65,5 +65,12 @@
       </div>
     </footer>
     <asset:javascript src="theme.js"/>
+
+    <asset:script type="text/javascript">
+    $(document).ready(function() {
+    $('select').material_select();
+    });
+    </asset:script>
+    <asset:deferredScripts/>
   </body>
 </html>
