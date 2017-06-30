@@ -12,7 +12,7 @@
 				</div>
 			</div>
 			<div class="input-field col s4">
-				<g:select name="prioridad" from="..10" value="" noSelection="['':'Priority']"/>
+				<g:select name="prioridad" from="${1..10}" value="" noSelection="['':'Priority']"/>
 				<label>Priority</label>
 			</div>
 		</div>
