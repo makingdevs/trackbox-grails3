@@ -1,12 +1,15 @@
 package com.makingdevs
 
 import grails.transaction.Transactional
+import mx.edu.ebc.CommentService
 
 class HomeController {
 
+  CommentService commentService
   ProjectService projectService
 
   def index() {
+    commentService.serviceMethod()
     def projectsFromGithub = projectService.projectsFromGithub()
     [ projects : Project.list(), project: new ProjectCommand(), projectsFromGithub: projectsFromGithub ]
   }

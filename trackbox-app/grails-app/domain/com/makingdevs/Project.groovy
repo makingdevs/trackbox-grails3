@@ -1,6 +1,8 @@
 package com.makingdevs
 
-class Project {
+import mx.edu.ebc.Commentable
+
+class Project implements Commentable {
 
   String owner
   String codeName
